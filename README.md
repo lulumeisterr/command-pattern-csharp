@@ -1,5 +1,3 @@
-# skills-cshap
-
 # Sobre
 
 A Ideia é receber listas de dados e transformar esses dados em relatorios com a utilização do stimulsoft. nesse caso sera
