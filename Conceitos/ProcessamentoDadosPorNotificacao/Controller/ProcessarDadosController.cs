@@ -34,7 +34,7 @@ namespace ProcessamentoDadosPorNotificacao.Controller
         /// Recebe lista de dados e transforma em excel usando stimusolft
         /// </summary>
         /// <param name="request">Lista de dados</param>
-        /// <returns>CalcularAcumuloTaxaRendimentoAsync</returns>
+        /// <returns>200 OK</returns>
         [HttpPost("received")]
         public IActionResult GerarExcelStimusolft([FromBody] List<DadosRequest> request)
         {

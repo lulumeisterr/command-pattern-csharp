@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProcessamentoDadosPorNotificacao.Commands.Enum
 {
+    /// <summary>
+    /// Classficacao de status
+    /// </summary>
     public enum CommandStatus
     {
         Success,
