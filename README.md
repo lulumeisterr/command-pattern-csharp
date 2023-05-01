@@ -23,10 +23,13 @@ gerado um excel personalizado afins de teste.
   - Abstração de dependências: O padrão Command permite que o objeto que executa a ação associada à solicitação seja tratado de forma independente, reduzindo as dependências entre os objetos no sistema.
 
   - Suporte para histórico de operações: O padrão Command torna mais fácil manter um registro de todas as solicitações executadas pelo sistema, permitindo que o sistema mantenha um histórico de operações para fins de auditoria ou para desfazer/refazer operações específicas.
-    
- - Stimulsoft
 
-    Estamos usando a biblioteca do stimulsoft para geração de relatorios.
+# CQRS VS Command
+
+ -O Command se concentra na separação de solicitações e ações, o CQRS se concentra na separação de leitura e gravação em uma arquitetura de software mais ampla.
+
+# Stimulsoft
+  - Estamos usando a biblioteca do stimulsoft para geração de relatorios afins de aprendizados.
     
 # Swagger
   - http://localhost:5000/index.html
