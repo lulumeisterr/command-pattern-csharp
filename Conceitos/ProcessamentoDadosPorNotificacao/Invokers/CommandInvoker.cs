@@ -18,7 +18,7 @@ namespace Invokers
 
         /// <summary>
         /// responsável por receber um objeto de comando e 
-        /// armazená-lo em uma variável interna para ser executado posteriormente
+        /// armazená-lo em uma variável interna para ser executado posteriormente (Aqui podemos fazer ou desfazer operacoes)
         /// </summary>
         /// <param name="command">Comando</param>
         public void SetCommand(ICommand command)
