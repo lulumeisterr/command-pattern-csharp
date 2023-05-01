@@ -26,11 +26,13 @@ namespace Commands
         public async Task Execute()
         {
             StiReport report = new StiReport();
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resource", "Report.mrt");
+            string exportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resource", "ResultFiles");
 
             try
             {
                 // carrega o relatório criado anteriormente
-                report.Load(@"C:\Users\lucas\OneDrive\Área de Trabalho\Desenvolvimento\skills-cshap\Conceitos\ProcessamentoDadosPorNotificacao\Resource\Report.mrt");
+                report.Load(path);
 
                 // define a fonte de dados (se houver)
                 report.RegData("root", _dados);
@@ -42,7 +44,7 @@ namespace Commands
                 await report.RenderAsync();
 
                 // Exporta o relatório para um arquivo excel
-                report.ExportDocument(StiExportFormat.Excel, @"C:\Users\lucas\meu_relatorio.xls");
+                report.ExportDocument(StiExportFormat.Excel, $"{exportPath}/meu_relatorio.xls");
 
                 Status = CommandStatus.Success;
             }
