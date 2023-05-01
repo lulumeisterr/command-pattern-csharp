@@ -7,7 +7,8 @@ gerado um excel personalizado afins de teste.
 
  - Padrão de projeto command
  
-    Nesse projeto foi usado o padrão command com intuito de encapsular uma solicitação como um objeto e passar essa solicitação para outro objeto para executá-la   posteriormente sem bloquear a thread principal do seu programa. Pensando em responsabilidade unica descoplando o objeto que solicita a ação do objeto que executa a ação, permitindo que você trate as solicitações como objetos independentes e executáveis posteriormente.
+    Nesse projeto foi usado o padrão command com intuito de encapsular uma solicitação como um objeto e passar essa solicitação para outro objeto para executá-la   posteriormente sem bloquear a thread principal do programa. 
+    Pensando em responsabilidade unica descoplando o objeto que solicita a ação do objeto que executa a ação, permitindo que você trate as solicitações como objetos independentes e executáveis posteriormente.
     
  # Principios do command
  
