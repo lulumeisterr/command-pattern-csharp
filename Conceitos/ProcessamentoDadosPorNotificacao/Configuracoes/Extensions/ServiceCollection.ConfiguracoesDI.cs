@@ -2,6 +2,7 @@
 using Commands;
 using Commands.Interfaces;
 using Configuracoes;
+using Invokers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,7 +21,8 @@ namespace ProcessamentoDadosPorNotificacao.Configuracoes.Extensions
         public static IServiceCollection AddDependenciasNegocio(this IServiceCollection services)
         {
             services.AddHttpContextAccessor();
-            services.AddTransient<ICommand, GerarExcelStimulsoftCommand>();
+            services.AddScoped<CommandInvoker>();
+            services.AddScoped<GerarExcelStimulsoftCommand>();
             services.AddAutoMapper(typeof(AutoMapperConfigProfile));
             services.AddControllers().AddJsonOptions(x => { x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles; });
             return services;

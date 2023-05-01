@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ProcessamentoDadosPorNotificacao.Commands.Enum;
 
 namespace Commands.Interfaces
 {
@@ -12,5 +13,6 @@ namespace Commands.Interfaces
         /// </summary>
         /// <returns>Task</returns>
         Task Execute();
+        CommandStatus Status { get; }
     }
 }

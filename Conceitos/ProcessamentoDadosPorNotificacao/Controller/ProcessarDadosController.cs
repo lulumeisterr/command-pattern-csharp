@@ -4,6 +4,7 @@ using Commands.Interfaces;
 using Invokers;
 using Microsoft.AspNetCore.Mvc;
 using Model;
+using ProcessamentoDadosPorNotificacao.Commands.Enum;
 using View.Request;
 
 namespace ProcessamentoDadosPorNotificacao.Controller
@@ -34,13 +35,21 @@ namespace ProcessamentoDadosPorNotificacao.Controller
         /// </summary>
         /// <param name="request">Lista de dados</param>
         /// <returns>CalcularAcumuloTaxaRendimentoAsync</returns>
-        [HttpGet("/api/receive/data")]
+        [HttpPost("received")]
         public IActionResult GerarExcelStimusolft([FromBody] List<DadosRequest> request)
         {
             ICommand gerarExcelStimulsoft = new GerarExcelStimulsoftCommand(_mapper.Map<List<Dados>>(request));
-            _invoker.SetCommand(gerarExcelStimulsoft);
-            _invoker.ExecuteCommand();
-            return Ok();
+
+            if (gerarExcelStimulsoft.Status == CommandStatus.Success)
+            {
+                _invoker.SetCommand(gerarExcelStimulsoft);
+                _invoker.ExecuteCommand();
+                return Ok();
+            }
+            else
+            {
+                return BadRequest(new { message = "A operação falhou." });
+            }
         }
 
     }

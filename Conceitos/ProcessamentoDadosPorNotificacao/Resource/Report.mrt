@@ -3,14 +3,6 @@
   <CalculationMode>Interpretation</CalculationMode>
   <Dictionary Ref="1" type="Dictionary" isKey="true">
     <BusinessObjects isList="true" count="0" />
-    <Databases isList="true" count="1">
-      <Relatorio Ref="2" type="Stimulsoft.Report.Dictionary.StiJsonDatabase" isKey="true">
-        <Alias>Relatorio</Alias>
-        <Key>a3f201feb567457693d83e15ea312ec7</Key>
-        <Name>Relatorio</Name>
-        <PathData>C:\Users\lucas\OneDrive\Área de Trabalho\dados.json</PathData>
-      </Relatorio>
-    </Databases>
     <DataSources isList="true" count="1">
       <root Ref="3" type="DataTableSource" isKey="true">
         <Alias>root</Alias>
